@@ -22,6 +22,11 @@ body {
     color: hsl(210, 46%, 95%);
 }
 
+.testimonial:nth-child(1) {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position:90% 7%;
+}
 
 
 .bg__violet {
@@ -48,6 +53,10 @@ body {
     background-color: var(--bg,hsl(0, 0%, 100%));
     padding: 1.2rem;
     border-radius: 10px;
+}
+
+.violet--border {
+    --img-border:3px solid hsl(263, 74%, 70%);
 }
 
 img {
@@ -82,6 +91,12 @@ img {
 @media (min-width:710px) {
     .testimonials-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonial:nth-child(1) {
+        background-position:80% top;
+        background-size: 20%;
+
     }
 
     .grid-colspan--2 {
