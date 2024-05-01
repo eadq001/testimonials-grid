@@ -1,0 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.flow--spacer > * + * {
+    margin-top: 1rem;
+}
+
+body {
+    padding: 1rem 0;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.testimonials-grid {
+    width: 90vw;
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 30px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    line-height: 1.3;
+    margin: 0 auto;
+    color: hsl(210, 46%, 95%);
+}
+
+
+
+.bg__violet {
+    --bg: hsl(263, 55%, 52%);
+}
+
+.bg__grayish-blue {
+    --bg:hsl(217, 19%, 35%);
+}
+
+.bg__blackish-blue {
+    --bg:hsl(219, 29%, 14%);
+}
+
+.bg__white {
+    color:hsl(217, 19%, 35%);
+}
+
+.bg__white .title, .bg__white .quote {
+    color: hsl(218, 17%, 37%);
+}
+
+.testimonial {
+    background-color: var(--bg,hsl(0, 0%, 100%));
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 100vw;
+    border: var(--img-border, 3px solid white);
+}
+
+.title, .quote {
+    color: hsl(0, 0%, 81%);
+}
+
+.name {
+    font-weight: 600;
+    display: inline-block;
+}
+
+.personal__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.head__quote {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.quote {
+    font-size: 1rem;
+}
+
+@media (min-width:710px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-colspan--2 {
+        grid-column: span 2;
+    }
+
+    .testimonial {
+        place-items: center;
+    }
+
+    .side--grid {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+}
